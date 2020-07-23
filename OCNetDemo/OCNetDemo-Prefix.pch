@@ -1,0 +1,35 @@
+//
+//  OCNetDemo-Prefix.pch
+//  OCNetDemo
+//
+//  Created by 纪志刚 on 2020/7/23.
+//  Copyright © 2020 纪志刚. All rights reserved.
+//
+
+#ifndef OCNetDemo_Prefix_pch
+#define OCNetDemo_Prefix_pch
+
+#import <Masonry.h> //布局
+#import <MJExtension.h> //数据解析
+#import "SVProgressHUD.h" //loading
+#import "HLLoadingView.h"
+#import "HLNetWorkingTool.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define KScreenBounds [UIScreen mainScreen].bounds /**< 屏幕尺寸*/
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width /**< 屏幕宽度*/
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height /**< 屏幕高度*/
+// 弱引用
+#define MJWeakSelf __weak typeof(self) weakSelf = self;
+
+static NSString *KunifiedKey = @"KunifiedKey";
+static NSString *kresponseMsg = @"err";
+static NSString *KResponseFail = @"请检查网络";
+static NSInteger KNetReferenceCount = 0; //网络请求的引用计数
+static NSTimeInterval defaultTimeOutInt = 10; //普通网络请求的超时时间
+static NSTimeInterval uploadTimeOutInt = 60; //上传文件的超时时间
+
+
+#endif /* OCNetDemo_Prefix_pch */
